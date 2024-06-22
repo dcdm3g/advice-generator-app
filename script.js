@@ -5,15 +5,12 @@ const generateIcon = document.querySelector('.generator__generate-icon')
 
 function generate() {
     generateButton.disabled = true
-    generateButton.classList.add('generator__generate-button--generating')
-
     generateIcon.src = 'assets/icon-loading.svg'
     generateIcon.alt = 'Generating'
 
     fetch('https://api.adviceslip.com/advice')
       .then((res) => res.json())
       .then((data) => {
-        generateButton.classList.remove('generator__generate-button--generating')
         generateButton.classList.add('generator__generate-button--limited')
 
         setTimeout(() => {

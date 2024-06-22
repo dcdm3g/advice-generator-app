@@ -103,12 +103,11 @@ button {
   }
 }
 
-.generator__generate-button--generating {
+.generator__generate-button:disabled {
   cursor: not-allowed;
 }
 
 .generator__generate-button--limited {
-  cursor: not-allowed;
   opacity: 0.5;
 }
 
