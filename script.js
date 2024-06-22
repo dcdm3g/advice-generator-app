@@ -5,7 +5,7 @@ const generateIcon = document.querySelector('.generator__generate-icon')
 
 function generate() {
     generateIcon.src = 'assets/icon-loading.svg'
-    generateIcon.alt = 'Loading'
+    generateIcon.alt = 'Generating'
 
     fetch('https://api.adviceslip.com/advice')
       .then((res) => res.json())
