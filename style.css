@@ -107,7 +107,7 @@ button {
   .generator {
     padding: 3rem 3rem 4.5rem;
     border-radius: 0.9375rem;
-    margin-bottom: 0;
+    margin-bottom: 2rem;
   }
 
   .generator__advice-id {
