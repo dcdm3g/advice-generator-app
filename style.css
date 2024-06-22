@@ -92,7 +92,7 @@ button {
   border-radius: 50%;
   display: grid;
   place-content: center;
-  transition-property: box-shadow;
+  transition-property: box-shadow, opacity;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
@@ -101,6 +101,15 @@ button {
   .generator__generate-button:hover {
     box-shadow: 0 0 40px var(--neon-green);
   }
+}
+
+.generator__generate-button--generating {
+  cursor: not-allowed;
+}
+
+.generator__generate-button--limited {
+  cursor: not-allowed;
+  opacity: 0.5;
 }
 
 @media (min-width: 640px) {
