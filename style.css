@@ -1,0 +1,124 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --dark-blue: #202733;
+  --dark-grayish-blue: #313A48;
+  --grayish-blue: #4F5D74;
+  --light-cyan: #CEE3E9;
+  --neon-green: #53FFAA;
+}
+
+body {
+  background-color: var(--dark-blue);
+  min-height: 100vh;
+  font-family: 'Manrope', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+.generator {
+  background-color: var(--dark-grayish-blue);
+  position: relative;
+  width: min(33.75rem, calc(100vw - 2rem));
+  padding: 2.5rem 1.5rem 4rem;
+  border-radius: 0.625rem;
+  margin-bottom: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  box-shadow: 30px 50px 80px rgba(0, 0, 0, 0.1);
+}
+
+.generator__advice-id {
+  color: var(--neon-green);
+  font-size: 0.6875rem;
+  font-weight: 800;
+  letter-spacing: 0.315em;
+}
+
+.generator__advice-content {
+  color: var(--light-cyan);
+  font-size: 1.5rem;
+  font-weight: 800;
+  text-align: center;
+  letter-spacing: -0.01em;
+}
+
+.generator__separator {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+}
+
+.generator__line {
+  background-color: var(--grayish-blue);
+  height: 1px;
+  flex: 1 1 0%;
+}
+
+.generator__rectangle {
+  background-color: var(--light-cyan);
+  border-radius: 0.1875rem;
+  height: 1rem;
+  width: 0.375rem;
+}
+
+.generator__line + .generator__rectangle,
+.generator__rectangle + .generator__line {
+  margin-left: 1rem;
+}
+
+.generator__rectangle + .generator__rectangle {
+  margin-left: 0.5rem;
+}
+
+.generator__generate-button {
+  background-color: var(--neon-green);
+  position: absolute;
+  bottom: -2rem;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  transition-property: box-shadow;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+@media (pointer: fine) {
+  .generator__generate-button:hover {
+    box-shadow: 0 0 40px var(--neon-green);
+  }
+}
+
+@media (min-width: 640px) {
+  .generator {
+    padding: 3rem 3rem 4.5rem;
+    border-radius: 0.9375rem;
+    margin-bottom: 0;
+  }
+
+  .generator__advice-id {
+    font-size: 0.8125rem;
+  }
+
+  .generator__advice-content {
+    font-size: 1.75rem;
+  }
+
+  .generator__separator {
+    margin-top: 1rem;
+  }
+}

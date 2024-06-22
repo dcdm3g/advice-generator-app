@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advice Generator App</title>
+  <meta name="description" content="A simple advice generator app.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="generator">
+      <h1 class="generator__advice-id">ADVICE #117</h1>
+      
+      <p class="generator__advice-content">
+        "It's easy to sit up and take notice, what's difficult is
+        getting up and taking action."
+      </p>
+
+      <div class="generator__separator" role="separator">
+        <div class="generator__line"></div>
+        <div class="generator__rectangle"></div>
+        <div class="generator__rectangle"></div>
+        <div class="generator__line"></div>
+      </div>
+
+      <button class="generator__generate-button" onclick="generate()">
+        <svg
+          width="24"
+          height="24" 
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M20 0H4a4.005 4.005 0 0 0-4 4v16a4.005 4.005 0 0 0 4 4h16a4.005 4.005 0 0 0 4-4V4a4.005 4.005 0 0 0-4-4ZM7.5 18a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm0-9a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm4.5 4.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm4.5 4.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm0-9a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Z" fill="#202733"/>
+        </svg>
+      </button>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
