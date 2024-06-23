@@ -1,5 +1,5 @@
 const adviceId = document.querySelector('.generator__advice-id')
-const adviceContent = document.querySelector('.generator__advice-content')
+const adviceQuote = document.querySelector('.generator__advice-quote')
 const generateButton = document.querySelector('.generator__generate-button')
 const generateIcon = document.querySelector('.generator__generate-icon')
 
@@ -21,6 +21,6 @@ function generate() {
         generateIcon.src = 'assets/icon-dice.svg'
         generateIcon.alt = 'Generate'
         adviceId.innerText = `ADVICE #${data.slip.id}`
-        adviceContent.innerText = `"${data.slip.advice.replaceAll('"', '\'')}"`
+        adviceQuote.innerText = data.slip.advice.replaceAll('"', '\'')
       })
 }
