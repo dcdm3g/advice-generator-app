@@ -26,6 +26,10 @@ button {
   cursor: pointer;
 }
 
+button:disabled {
+  cursor: not-allowed;
+}
+
 .generator {
   background-color: var(--dark-grayish-blue);
   position: relative;
@@ -101,10 +105,6 @@ button {
   .generator__generate-button:hover {
     box-shadow: 0 0 40px var(--neon-green);
   }
-}
-
-.generator__generate-button:disabled {
-  cursor: not-allowed;
 }
 
 .generator__generate-button--limited {
