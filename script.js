@@ -9,18 +9,26 @@ function generate() {
     generateIcon.alt = 'Generating'
 
     fetch('https://api.adviceslip.com/advice')
-      .then((res) => res.json())
+      .then((res) => {
+        if (!res.ok) throw new Error('API response was not ok')
+        return res.json()
+      })
       .then((data) => {
         generateButton.classList.add('generator__generate-button--limited')
+        generateIcon.src = 'assets/icon-dice.svg'
+        generateIcon.alt = 'Generate'
+        adviceId.innerText = `ADVICE #${data.slip.id}`
+        adviceQuote.innerText = data.slip.advice.replaceAll('"', '\'')
 
         setTimeout(() => {
           generateButton.classList.remove('generator__generate-button--limited')
           generateButton.disabled = false
         }, 2000)
-
+      })
+      .catch(() => {
+        generateButton.disabled = false
         generateIcon.src = 'assets/icon-dice.svg'
         generateIcon.alt = 'Generate'
-        adviceId.innerText = `ADVICE #${data.slip.id}`
-        adviceQuote.innerText = data.slip.advice.replaceAll('"', '\'')
+        alert('Oops, something went wrong! Please try again later.')
       })
 }
